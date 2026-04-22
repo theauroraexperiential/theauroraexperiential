@@ -1,42 +1,43 @@
 import React from 'react';
-import { Camera, MonitorPlay, Music } from 'lucide-react';
+import { Camera } from 'lucide-react';
+import aeLogo from '../assets/AE logo without bg.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-charcoal-900 border-t border-charcoal-800 pt-16 pb-8">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-6">
+    <footer className="bg-charcoal-950 border-t border-charcoal-800 pt-16 pb-8 relative z-20">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
           
-          <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold tracking-widest uppercase text-white mb-2">
-              Sana Arora
-            </h2>
-            <p className="text-slate-400 text-sm">
-              Live Singer • Performer • Artist
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <img src={aeLogo} alt="The Aurora Experiential" className="h-14 object-contain mb-4 filter brightness-110" />
+            <p className="text-slate-400 text-sm max-w-sm mb-6">
+              Live Entertainment Curation Agency. <br/>
+              Curating high-energy experiences that drive footfall and unforgettable nights.
             </p>
+            <a href="https://www.instagram.com/theauroraexperiential/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gold-500/70 hover:text-gold-400 transition-colors group">
+              <div className="w-8 h-8 rounded-full border border-gold-500/30 flex items-center justify-center group-hover:border-gold-500/80 transition-colors">
+                 <Camera size={16} />
+              </div>
+              <span className="text-sm font-semibold tracking-wider">@theauroraexperiential</span>
+            </a>
           </div>
 
-          <div className="flex space-x-6">
-            <a href="https://www.instagram.com/sanaarora10/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-gold-400 transition-colors">
-              <Camera size={24} />
-            </a>
-            <a href="https://www.youtube.com/channel/UCM7-sYi6RKJIOY8PBjqL5_Q" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-gold-400 transition-colors">
-              <MonitorPlay size={24} />
-            </a>
-            <a href="https://open.spotify.com/artist/33Q40lJ8jvHRpaAS8sb0dJ" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-gold-400 transition-colors">
-              <Music size={24} />
-            </a>
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            <a href="#about" className="text-sm font-semibold text-slate-400 hover:text-gold-400 uppercase tracking-wider transition-colors">About</a>
+            <a href="#artists" className="text-sm font-semibold text-slate-400 hover:text-gold-400 uppercase tracking-wider transition-colors">Artists</a>
+            <a href="#why-us" className="text-sm font-semibold text-slate-400 hover:text-gold-400 uppercase tracking-wider transition-colors">Why Us</a>
+            <a href="#booking" className="text-sm font-semibold text-slate-400 hover:text-gold-400 uppercase tracking-wider transition-colors">Contact</a>
           </div>
 
         </div>
 
         <div className="border-t border-charcoal-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Sana Arora. All rights reserved.
+          <p className="text-slate-500 text-sm font-medium">
+            © {new Date().getFullYear()} The Aurora Experiential. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-slate-500">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          <div className="flex gap-6 text-sm text-slate-600 font-medium">
+            <span className="hover:text-slate-400 transition-colors cursor-pointer">Privacy Policy</span>
+            <span className="hover:text-slate-400 transition-colors cursor-pointer">Terms of Service</span>
           </div>
         </div>
       </div>

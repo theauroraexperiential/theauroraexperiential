@@ -1,31 +1,34 @@
 import React from 'react';
-import { MapPin } from 'lucide-react';
+import { Building2, UtensilsCrossed, Gem, HeartHandshake, Briefcase } from 'lucide-react';
 
 const Cities = () => {
-  const cities = [
-    "Delhi", "Mumbai", "Bangalore", "Gurgaon", "Jaipur", "Kolkata", 
-    "Chennai", "Noida", "Goa", "Jodhpur", "Jaisalmer", "Udaipur", 
-    "Ahmedabad", "Chandigarh", "Hyderabad", "Pune", "Lucknow", 
-    "Agra", "Srinagar", "Dehradun", "Rishikesh", "Manali", "Shimla"
+  const clients = [
+    { name: "Clubs & Lounges", icon: <Building2 size={24} /> },
+    { name: "Restaurants & Cafes", icon: <UtensilsCrossed size={24} /> },
+    { name: "Luxury Venues", icon: <Gem size={24} /> },
+    { name: "Wedding Planners", icon: <HeartHandshake size={24} /> },
+    { name: "Corporate Event Companies", icon: <Briefcase size={24} /> }
   ];
 
   return (
-    <section id="cities" className="relative z-10 w-full pt-10 border-t border-charcoal-700/50">
-      <div className="text-center mb-12">
-        <h2 className="text-sm font-bold tracking-widest text-gold-500 uppercase mb-3">Coverage</h2>
-        <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Available Nationwide</h3>
-        <p className="text-slate-400 max-w-2xl mx-auto">
-          Sana performs across India. From premium destination weddings in Udaipur to corporate galas in Mumbai and college fests in Delhi.
-        </p>
-      </div>
+    <section id="clients" className="relative z-10 w-full pt-20 pb-12 border-t border-charcoal-700/50 bg-charcoal-900">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-sm font-bold tracking-[0.2em] text-gold-500 uppercase mb-3">Partnerships</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Who We Work With</h3>
+        </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-6 gap-x-4">
-        {cities.map((city, idx) => (
-          <div key={idx} className="flex items-center justify-center gap-2 text-slate-300">
-            <MapPin size={16} className="text-gold-500/70" />
-            <span className="font-medium text-sm hover:text-white transition-colors cursor-default">{city}</span>
-          </div>
-        ))}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+          {clients.map((client, idx) => (
+            <div 
+              key={idx} 
+              className="flex items-center gap-3 px-6 py-4 bg-charcoal-800 border border-charcoal-700 rounded-2xl text-slate-300 hover:text-white hover:border-gold-500/50 transition-all shadow-sm hover:shadow-[0_0_15px_rgba(212,175,55,0.15)] group"
+            >
+              <span className="text-gold-500/70 group-hover:text-gold-400 transition-colors">{client.icon}</span>
+              <span className="font-semibold">{client.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
