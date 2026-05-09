@@ -4,12 +4,18 @@ import aeLogo from '../assets/AE logo without bg.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-charcoal-950 border-t border-charcoal-800 pt-16 pb-8 relative z-20">
+    <footer className="bg-charcoal-950 border-t border-charcoal-800 pt-12 md:pt-16 pb-8 relative z-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
           
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <img src={aeLogo} alt="The Aurora Experiential" className="h-14 object-contain mb-4 filter brightness-110" />
+            <div className="flex items-center gap-3 mb-4">
+              <img src={aeLogo} alt="The Aurora Experiential" className="h-14 object-contain filter brightness-110" />
+              <div className="flex flex-col leading-none">
+                <span className="text-white font-extrabold text-base tracking-wide uppercase">The Aurora</span>
+                <span className="text-gold-400 font-semibold text-[10px] tracking-[0.2em] uppercase">Experiential</span>
+              </div>
+            </div>
             <p className="text-slate-400 text-sm max-w-sm mb-6">
               Live Entertainment Curation Agency. <br/>
               Curating high-energy experiences that drive footfall and unforgettable nights.
@@ -31,7 +37,7 @@ const Footer = () => {
 
         </div>
 
-        <div className="border-t border-charcoal-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-charcoal-800 pt-6 md:pt-8 pb-2 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm font-medium">
             © {new Date().getFullYear()} The Aurora Experiential. All rights reserved.
           </p>

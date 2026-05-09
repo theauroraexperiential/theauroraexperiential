@@ -28,8 +28,12 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3 z-50">
-          <img src={aeLogo} alt="The Aurora Experiential Logo" className="h-10 md:h-12 object-contain" />
+        <a href="#" className="flex items-center gap-2.5 z-50">
+          <img src={aeLogo} alt="The Aurora Experiential Logo" className="h-12 md:h-14 object-contain" />
+          <div className="flex flex-col leading-none">
+            <span className="text-white font-extrabold text-sm md:text-base tracking-wide uppercase">The Aurora</span>
+            <span className="text-gold-400 font-semibold text-[9px] md:text-[10px] tracking-[0.2em] uppercase">Experiential</span>
+          </div>
         </a>
 
         {/* Desktop Nav */}
